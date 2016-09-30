@@ -1,29 +1,22 @@
 <h1>Edit a Task</h1>
 
-<form name="task" action="update" method="post" accept-charset="utf-8">
- <input type="hidden" name="_method" value="PUT" >
+<section>
+  <%= form_for :task do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
 
- <label for="title">Title:</label>
- <input type="text" name="title" id="title" value="<%= @mytask[:title]%>">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
 
- <label for="description">Description:</label>
- <input type="text" name="description" id="description" value="<%= @mytask[:description]%>" >
+    <%= f.label :details %>
+    <%= f.text_area :details %>
 
- <label for="details">Details:</label>
- <textarea id="details" name="details" rows="5" cols="10" >
-   <%= @mytask[:details] %>
- </textarea>
+    <%= f.label :completion_status %>
+    <%= f.check-box :completion_status %>
 
- <label for="completion-status">Completion Status</label>
- <input checked="status" name="status" id="status" value="<%= @mytask[:completion_status]%>">
+    <%= f.label :completion_date %>
+    <%= f.date_field :completion_date %>
 
- <label for="completion-date">Completion Date</label>
- <input type="date" name="date" id="date" value="<%= @mytask[:completion_date]%>">
-
- <%= tag(:input, :type => "hidden",
-   :name => request_forgery_protection_token.to_s,
-   :value => form_authenticity_token) %>
-
- <input type="submit" value="Update Task" >
-
-</form>
+    <%= f.save %>
+    <% end %>
+</section>

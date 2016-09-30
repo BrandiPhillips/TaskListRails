@@ -4,16 +4,21 @@
   <p>
     <%= @mytask.details %>
   </p>
+
+  <p>
+    <%= @mytask.completion_status %>
+  </p>
+
+  <p>
+    <%= @mytask.completion_date %>
+  </p>
+  
   <ul>
     <li>
-      <%= @mytask.completion_status %>
+      <%= link_to "Edit", edit_path(@mytask.id) %>
     </li>
     <li>
-      <%= @mytask.completion_date %>
+       <%= button_to "Delete Task", {action: "destroy", id: @mytask.id}, method: :delete, data: {confirm: "Are you sure you want to delete this task?" }%>
     </li>
   </ul>
 </article>
-
- <%= link_to("edit", edit_path(@mytask.id)) %>
-
- <%= link_to("delete", delete_path(@mytask.id), method: :delete) %>
