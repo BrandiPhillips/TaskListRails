@@ -1,0 +1,19 @@
+<h1>Task Helper</h1>
+
+<% @tasks.each do |task| %>
+<article>
+  <h2> <%= link_to task.title, show_path(task.id)) %> </h2>
+  <h3> Type: <%= task.description %> </h3>
+  <p>
+    <%= task.details %>
+  </p>
+  <ul>
+    <li>
+      <%= task.completion_status %>
+    </li>
+    <li>
+      <%= task.completion_date %>
+    </li>
+  </ul>
+</article>
+<% end %>

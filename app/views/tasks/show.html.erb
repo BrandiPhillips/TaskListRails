@@ -1,0 +1,19 @@
+<article>
+  <h2> <%= @mytask.title %> </h2>
+  <h3> Type: <%= @mytask.description %> </h3>
+  <p>
+    <%= @mytask.details %>
+  </p>
+  <ul>
+    <li>
+      <%= @mytask.completion_status %>
+    </li>
+    <li>
+      <%= @mytask.completion_date %>
+    </li>
+  </ul>
+</article>
+
+ <%= link_to("edit", edit_path(@mytask.id)) %>
+
+ <%= link_to("delete", delete_path(@mytask.id), method: :delete) %>
