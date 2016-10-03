@@ -20,6 +20,9 @@
     <li>
        <%= button_to "Delete Task", {action: "destroy", id: task.id}, method: :delete, data: {confirm: "Are you sure you want to delete this task?" }%>
     </li>
+    <li>
+       <%= button_to "Complete Task", {action: "patch", id: task.id}, method: :delete}%>
+    </li>
   </ul>
 </article>
 <% end %>

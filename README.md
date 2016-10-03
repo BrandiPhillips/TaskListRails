@@ -1,3 +1,10 @@
+###Reflection
+I am still trying to figure out the relationship between the model and the controller.  It was my understanding that logic that affects the database goes in the model files...  I was able to get the create new and update to work until I got to the part about the button to complete a task.  I am still working on that part.  I am not very comfortable with how to write the controller methods for various functionality.  Alyssa put her button logic in the update method in her controller it's done in a way I imagined doing it but couldn't quite get there on my own.  If I had another long study day like yesterday I am sure I would have gotten there on my own...  I am still trying to figure out how I can use the server and bash to help me trouble shoot.  Also, if you could please find a way to write in like 5 extra hours in the weekend.hours life code that would be great!  :) 
+
+
+
+
+
 # Task List Rails ✅
 We are going to build a Task List in Rails. This web application will enable us to keep track of list of tasks with the functionality to add, edit and remove tasks from a list.
 
@@ -50,7 +57,7 @@ In this wave we will add the first set of user interactivity and persistence.
     1. Ask the user to confirm that they definitely want to delete the task.
     1. Delete the task from the database and redirect the user back to the list of remaining tasks
 
-<!-- ## 🌊 Wave 3
+## 🌊 Wave 3
 In this wave we will extend the interactivity with users, allowing them to edit existing tasks in a couple of different ways. As always, follow _RESTful_ conventions when implementing these features.
 
 - Add the ability for the user to mark a task complete
@@ -63,5 +70,3 @@ In this wave we will extend the interactivity with users, allowing them to edit 
   - Link to the `edit` action from the task's `show` page.
   - DRY up your code by reusing the view code from the `new` functionality
     - Hint: Rendering _partials_ in Rails.
-
- -->

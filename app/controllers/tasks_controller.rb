@@ -43,15 +43,19 @@ class TasksController < ApplicationController
 
   def update
     @mytask = Task.find(params[:id].to_i)
-
+    if params[:completion_status] == "true"
+      params[:completion_date] = Time.now
+    else
+      parmas[:completion_date] = nil
+    end
   end
 
-
-  def self.allposts
-    [
-      {id: 1, title: "pay bills", description: "financial task", details: "T-Mobil due", completion_status: false, completion_date: nil}, {id: 2, title: "dentist appointment", description: "wellness task", details: "Malika needs check-up", completion_status: true, completion_date: "09/15/2016"}, {id: 3, title: "call pharmacy", description: "wellness task", details: "check status of humera", completion_status: false, completion_date: nil}
-    ]
-  end
+  #
+  # def self.allposts
+  #   [
+  #     {id: 1, title: "pay bills", description: "financial task", details: "T-Mobil due", completion_status: false, completion_date: nil}, {id: 2, title: "dentist appointment", description: "wellness task", details: "Malika needs check-up", completion_status: true, completion_date: "09/15/2016"}, {id: 3, title: "call pharmacy", description: "wellness task", details: "check status of humera", completion_status: false, completion_date: nil}
+  #   ]
+  # end
 
   private
   def user_params

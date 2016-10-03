@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'tasks#index'
 
+  resources :tasks
+
   get 'tasks/index', as: 'index'
 
   get 'tasks/create' => 'tasks#create'
@@ -8,6 +10,8 @@ Rails.application.routes.draw do
   post 'tasks/create' => 'tasks#create', as: 'create'
 
   get 'tasks/:id/show/' => 'tasks#show', as: 'show'
+
+  patch 'tasks/:id/mark_complete' => 'tasks#'
 
   delete 'tasks/:id/destroy' => 'tasks#destroy', as: 'delete'
 
