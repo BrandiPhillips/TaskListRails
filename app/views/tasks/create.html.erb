@@ -4,11 +4,10 @@
 <p>
   <%= @mytask.details %>
 </p>
-<ul>
-  <li>
-    <%= @mytask.completion_status %>
-  </li>
-  <li>
-    <%= @mytask.completion_date %>
-  </li>
-</ul>
+<h3>Completed On:<%= @mytask.completion_date %></h3>
+
+  <ul>
+    <li>
+      <%= link_to "Home", index_path %>
+    </li>
+  </ul>

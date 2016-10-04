@@ -1,7 +1,7 @@
 <h1>Edit a Task</h1>
 
 <section>
-  <%= form_for :task do |f| %>
+  <%= form_for @mytask, as: :edit, url: update_path, method: :put do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
 
@@ -11,12 +11,6 @@
     <%= f.label :details %>
     <%= f.text_area :details %>
 
-    <%= f.label :completion_status %>
-    <%= f.check-box :completion_status %>
-
-    <%= f.label :completion_date %>
-    <%= f.date_field :completion_date %>
-
-    <%= f.save %>
+    <%= f.submit %>
     <% end %>
 </section>
