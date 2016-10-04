@@ -1,6 +1,8 @@
 ###Reflection
 I am still trying to figure out the relationship between the model and the controller.  It was my understanding that logic that affects the database goes in the model files...  I was able to get the create new and update to work until I got to the part about the button to complete a task.  I am still working on that part.  I am not very comfortable with how to write the controller methods for various functionality.  Alyssa put her button logic in the update method in her controller it's done in a way I imagined doing it but couldn't quite get there on my own.  If I had another long study day like yesterday I am sure I would have gotten there on my own...  I am still trying to figure out how I can use the server and bash to help me trouble shoot.  Also, if you could please find a way to write in like 5 extra hours in the weekend.hours life code that would be great!  :) 
 
+So, now that the assignment is complete I wanted to add a few things here.  I had a hard time figuring out the correct syntax to use for the links and buttons.  There seems to be several different ways to create them.  I also found it a bit difficult to figure out the correct syntax to use in the controller methods especially when working with the forms.  Having the bug helper gem Jamie showed us really helped!  After completing the assignment I do feel I have a better overall understanding of rails.  
+
 
 
 
