@@ -23,8 +23,8 @@
     <li>
       <%= button_to "Edit Task", edit_path(task.id), {:method => :get} %>
     </li>
-    <li>
-      <%= link_to "Home", index_path %>
-    </li>
+
   </ul>
 </article>
+
+<%= render "shared/footer" %>
