@@ -1,4 +1,8 @@
+
+
 class TasksController < ApplicationController
+
+  before_action :find_task except: [:index, :create, :new]
 
   def index
     @tasks = Task.all
@@ -21,22 +25,22 @@ class TasksController < ApplicationController
   end
 
   def show
-    @mytask = Task.find(params[:id].to_i)
+  
   end
 
   def destroy
-    @mytask = Task.find(params[:id].to_i)
+
     @mytask.destroy
     @destroy_msg = "Task Successfully Deleted"
   end
 
   def edit
-      @mytask = Task.find(params[:id].to_i)
+
   end
 
   def update
     @params = params
-    @mytask = Task.find(params[:id].to_i)
+
     @mytask.title = params["task"]["title"]
     @mytask.description = params["task"]["description"]
     @mytask.details = params["task"]["details"]
@@ -47,7 +51,7 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
-    @mytask = Task.find(params[:id].to_i)
+
     @mytask.completion_status = "true"
     @mytask.completion_date = Time.now
     @mytask.save
@@ -64,6 +68,10 @@ class TasksController < ApplicationController
   private
   def user_params
     params.require(:task).permit(:title, :description, :completion_status, :completion_date)
+  end
+
+  def find_task
+    @mytask = Task.find(params[:id].to_i)
   end
 
 end
