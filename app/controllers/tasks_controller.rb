@@ -2,7 +2,7 @@
 
 class TasksController < ApplicationController
 
-  before_action :find_task except: [:index, :create, :new]
+  before_action :find_task, except: [:index, :create, :new]
 
   def index
     @tasks = Task.all
@@ -25,7 +25,7 @@ class TasksController < ApplicationController
   end
 
   def show
-  
+
   end
 
   def destroy
