@@ -9,6 +9,12 @@
 /test/version_tmp/
 /tmp/
 
+# hide the .env - hide yo secrets!
+/.env
+
+# hide the .env - hide yo secrets!
+/.env
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
