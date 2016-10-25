@@ -7,8 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
+  <h1><%= link_to "Adulting", root_path %></h1>
+  <nav>
+    <ul>
+      <% if session[:user_id] == nil %>
+        <li><%= link_to "Login", "/auth/github" %></li>
+      <% else %>
+          <li><%= link_to "Logout", session_delete_path(session[:user_id]), method: :delete, data: {confirm:"Are you sure you want to Logout?"} %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
 <%= yield %>
 
+<footer>
+<nav>
+  <ul>
+    <li>
+      <%= link_to "Home", index_path %>
+    </li>
+    <li>
+      <%= link_to "Add New Task", new_path %>
+    </li>
+  </ul>
+</nav>
+</footer>
 </body>
 </html>

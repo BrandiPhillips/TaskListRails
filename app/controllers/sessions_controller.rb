@@ -10,12 +10,21 @@ class SessionsController < ApplicationController
     if @user.nil?
       @user = User.build_from_github(auth_hash)
       render :creation_failure unless @user.save
+
+      session[:user_id] = @user.id
     end
-    redirect_to sessions_path
+    session[:user_id] = @user.id
+    redirect_to tasks_path
   end
 
   def index
     @user = User.find(session[:user_id])
+  end
 
+  def destroy
+    session[:user_id] = nil
+    flash[:notice] = "You Have Logged Out"
+    redirect_to root_path
+  end
 
 end

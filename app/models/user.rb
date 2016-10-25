@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
     user.email = auth_hash['info']['email']
 
     return user
+  end 
 end
