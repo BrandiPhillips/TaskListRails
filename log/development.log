@@ -14140,3 +14140,48 @@ Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/assets/foundation.css" for ::1 at 2016-10-30 12:58:21 -0700
+
+
+Started GET "/tasks/index" for ::1 at 2016-10-30 13:13:04 -0700
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-30 13:13:04 -0700
+
+
+Started GET "/tasks/index" for ::1 at 2016-10-30 13:14:56 -0700
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered shared/_footer.erb (0.8ms)
+  Rendered tasks/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 79ms (Views: 77.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-30 13:14:57 -0700
+
+
+Started GET "/tasks/new" for ::1 at 2016-10-30 13:15:14 -0700
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_form.html.erb (7.2ms)
+  Rendered tasks/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 125ms (Views: 87.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tasks/create" for ::1 at 2016-10-30 13:15:57 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P4Fo+jHTJ7bFbM2sY8ijj6WaRIP1F7sznHf54Gz+/1otpR7CCspbNzGSYW8EsRCruulZDDXAWcPmxtyCa9lrUw==", "task"=>{"title"=>"Cancel Hair appointment", "description"=>"This needs to be a drop down option", "details"=>"Reschedule with Ricardo"}, "commit"=>"create"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "tasks" ("title", "description", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Cancel Hair appointment"], ["description", "This needs to be a drop down option"], ["details", "Reschedule with Ricardo"], ["created_at", "2016-10-30 20:15:57.688636"], ["updated_at", "2016-10-30 20:15:57.688636"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered tasks/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 218ms (Views: 211.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-30 13:15:58 -0700
