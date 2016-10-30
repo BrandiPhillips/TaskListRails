@@ -9,11 +9,10 @@
 /test/version_tmp/
 /tmp/
 
-# hide the .env - hide yo secrets!
-/.env
+
 
 # hide the .env - hide yo secrets!
-/.env
+.env
 
 ## Specific to RubyMotion:
 .dat*

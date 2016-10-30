@@ -4,19 +4,27 @@
 class SessionsController < ApplicationController
   def create
     auth_hash = request.env['omniauth.auth']
-    redirect_to login_failure_path unless auth_hash['uid']
+    # raise
+    # if omniauth credentials are not retrieved - try again:
+    if auth_hash == nil
+      flash[:notice] = "Login Failed, Please try again"
+      return redirect_to root_path
+    end
 
     @user = User.find_by(uid: auth_hash[:uid], provider: 'github')
+    # if the user has not already been created in the database, create a new user:
     if @user.nil?
       @user = User.build_from_github(auth_hash)
-      render :creation_failure unless @user.save
-
       session[:user_id] = @user.id
+
+      return redirect_to users_edit_path(@user.id)
     end
+    # save the user id in the session:
     session[:user_id] = @user.id
-    redirect_to tasks_path
+    redirect_to index_path
   end
 
+  # this is here becuase it was in the example and in betsy... but not sure that it is needed:
   def index
     @user = User.find(session[:user_id])
   end

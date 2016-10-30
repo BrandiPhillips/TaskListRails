@@ -1,0 +1,13 @@
+
+<div>
+  <h1>Adulting</h1>
+  <p>Assistance for your inner child</p>
+</div>
+
+<div>
+
+  <% if session[:user_id] == nil %>
+    <%= link_to "Log in to pretend Adult", "/auth/github" %></li>
+  <% end %>
+
+</div>
