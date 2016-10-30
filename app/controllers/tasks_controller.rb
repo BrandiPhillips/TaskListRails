@@ -17,6 +17,7 @@ class TasksController < ApplicationController
     @mytask.completion_status = params["task"]["completion_status"]
     @mytask.completion_date = params["task"]["completion_date"]
     @mytask.save
+    redirect_to index_path
   end
 
 
@@ -47,7 +48,7 @@ class TasksController < ApplicationController
     @mytask.completion_status = params["task"]["completion_status"]
     @mytask.completion_date = params["task"]["completion_date"]
     @mytask.save
-
+    redirect_to index_path
   end
 
   def mark_complete

@@ -15,7 +15,6 @@ class SessionsController < ApplicationController
     # if the user has not already been created in the database, create a new user:
     if @user == nil
       @user = User.build_from_github(auth_hash)
-      flash[:notice] = "Unable to save User info"
       return redirect_to root_path unless @user.save
     else
       session[:user_id] = @user.id

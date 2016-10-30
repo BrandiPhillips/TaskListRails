@@ -1,14 +1,24 @@
 <div class='row'>
-  <div class='column'>
+  <div class='small-6 column'>
+
     <h1>Adulting</h1>
   </div>
-  <div class='column'>
+  <div class='small-6 column'>
     <nav>
-        <% if current_user %>
-            <li><%= link_to "Logout", session_delete_path(session[:user_id]), method: :delete, data: {confirm:"Are you sure you want to Logout?"} %>
-        <% end %>
+      <ul>
+        <li>
+          <%= link_to "Home", index_path %>
+        </li>
+        <li>
+          <%= link_to "Add New Task", new_path %>
+        </li>
+        <li>
+          <%= link_to "Logout", session_delete_path(session[:user_id]), method: :delete, data: {confirm:"Are you sure you want to Logout?"} %>
+        </li>
+      </ul>
     </nav>
   </div>
+</div>
 
 
 <% @tasks.each do |task| %>
@@ -47,5 +57,3 @@
   </div>
 </article>
 <% end %>
-
-<%= render partial: "shared/footer" %>
