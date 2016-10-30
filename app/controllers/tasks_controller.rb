@@ -74,4 +74,8 @@ class TasksController < ApplicationController
     @mytask = Task.find(params[:id].to_i)
   end
 
+  def find_user
+    @user = User.find_by(id: session[:user_id].to_i)
+  end
+
 end

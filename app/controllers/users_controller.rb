@@ -12,6 +12,9 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user.profile_name = params[:user][:profile_name]
+    @user.save
+    redirect_to index_path
   end
 
   private

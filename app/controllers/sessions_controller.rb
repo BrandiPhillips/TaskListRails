@@ -13,15 +13,19 @@ class SessionsController < ApplicationController
 
     @user = User.find_by(uid: auth_hash[:uid], provider: 'github')
     # if the user has not already been created in the database, create a new user:
-    if @user.nil?
+    if @user == nil
       @user = User.build_from_github(auth_hash)
+      flash[:notice] = "Unable to save User info"
+      return redirect_to root_path unless @user.save
+    else
       session[:user_id] = @user.id
 
       return redirect_to users_edit_path(@user.id)
     end
     # save the user id in the session:
     session[:user_id] = @user.id
-    redirect_to index_path
+    # return
+    redirect_to 'index'
   end
 
   # this is here becuase it was in the example and in betsy... but not sure that it is needed:
