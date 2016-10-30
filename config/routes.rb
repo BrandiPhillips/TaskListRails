@@ -1,24 +1,39 @@
 Rails.application.routes.draw do
-  root to: 'tasks#index'
+  root 'navigations#index'
 
-  get 'tasks/index', as: 'index'
+  get 'users/new'
 
-  get 'tasks/create' => 'tasks#create'
+  get 'users/create'
+
+  get 'users/:id/edit' => 'users#edit', as: 'users_edit'
+
+  patch 'users/:id/update' => 'users#update', as: 'users_update'
+
+  get 'navigations/index' => 'navigations#index'
+
+  get 'navigations/show'
+
+  get 'sessions/create'
+
+  delete 'sessions/:id/destroy' => 'sessions#destroy', as: 'session_delete'
+
+  get 'tasks/index' => 'tasks#index', as: 'index'
+
+  get 'tasks/new' => 'tasks#new', as: 'new'
 
   post 'tasks/create' => 'tasks#create', as: 'create'
 
   get 'tasks/:id/show/' => 'tasks#show', as: 'show'
 
-  delete 'tasks/:id/destroy' => 'tasks#destroy', as: 'delete'
-
   get 'tasks/:id/edit' => 'tasks#edit', as: 'edit'
 
-  put 'tasks/:id/update' => 'tasks#update', as: 'update'
+  patch 'tasks/:id/update' => 'tasks#update', as: 'update'
 
-  get 'tasks/new' => 'tasks#new', as: 'new'
-
+  delete 'tasks/:id/destroy' => 'tasks#destroy', as: 'delete'
 
   patch 'tasks/:id/mark_complete' => 'tasks#mark_complete', as: 'mark_complete'
+
+  get "/auth/:provider/callback" => "sessions#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

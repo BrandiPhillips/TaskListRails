@@ -1,4 +1,8 @@
+
+
 class TasksController < ApplicationController
+  before_action :require_user
+  before_action :find_task, except: [:index, :create, :new]
 
   def index
     @tasks = Task.all
@@ -7,11 +11,11 @@ class TasksController < ApplicationController
   def create
     @params = params
     @mytask = Task.new
-    @mytask.title = params["create"]["title"]
-    @mytask.description = params["create"]["description"]
-    @mytask.details = params["create"]["details"]
-    @mytask.completion_status = params["create"]["completion_status"]
-    @mytask.completion_date = params["create"]["completion_date"]
+    @mytask.title = params["task"]["title"]
+    @mytask.description = params["task"]["description"]
+    @mytask.details = params["task"]["details"]
+    @mytask.completion_status = params["task"]["completion_status"]
+    @mytask.completion_date = params["task"]["completion_date"]
     @mytask.save
   end
 
@@ -21,35 +25,37 @@ class TasksController < ApplicationController
   end
 
   def show
-    @mytask = Task.find(params[:id].to_i)
+
   end
 
   def destroy
-    @mytask = Task.find(params[:id].to_i)
+
     @mytask.destroy
     @destroy_msg = "Task Successfully Deleted"
   end
 
   def edit
-    @mytask = Task.find(params[:id].to_i)
+
   end
 
   def update
     @params = params
-    @mytask = Task.find(params[:id].to_i)
-    @mytask.title = params["edit"]["title"]
-    @mytask.description = params["edit"]["description"]
-    @mytask.details = params["edit"]["details"]
-    @mytask.completion_status = params["edit"]["completion_status"]
-    @mytask.completion_date = params["edit"]["completion_date"]
+
+    @mytask.title = params["task"]["title"]
+    @mytask.description = params["task"]["description"]
+    @mytask.details = params["task"]["details"]
+    @mytask.completion_status = params["task"]["completion_status"]
+    @mytask.completion_date = params["task"]["completion_date"]
     @mytask.save
 
   end
 
   def mark_complete
-    @mytask = Task.find(params[:id].to_i)
+
     @mytask.completion_status = "true"
     @mytask.completion_date = Time.now
+    @mytask.save
+    redirect_to index_path
   end
 
   #
@@ -62,6 +68,14 @@ class TasksController < ApplicationController
   private
   def user_params
     params.require(:task).permit(:title, :description, :completion_status, :completion_date)
+  end
+
+  def find_task
+    @mytask = Task.find(params[:id].to_i)
+  end
+
+  def find_user
+    @user = User.find_by(id: session[:user_id].to_i)
   end
 
 end

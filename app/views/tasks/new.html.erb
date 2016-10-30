@@ -1,16 +1,3 @@
 <h1>Create a New Task</h1>
 
-<section>
-  <%= form_for @mytask, as: :create, url: create_path, method: :post do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-
-    <%= f.label :details %>
-    <%= f.text_area :details %>
-
-    <%= f.submit %>
-    <% end %>
-</section>
+<%= render partial: "shared/form", locals: {action_name: "create"} %>
