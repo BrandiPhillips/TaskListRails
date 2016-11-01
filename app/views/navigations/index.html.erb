@@ -1,15 +1,17 @@
-
-<div>
-  <h1>Adulting</h1>
-  <p>Assistance for your inner child</p>
+<div class="row">
+  <div class=small-6 column center>
+    <h1>Adulting</h1>
+  </div>
 </div>
 
-<div>
+<div class="row">
+  <div class=small-6 column center>
 
-  <% if session[:user_id] == nil %>
-    <%= link_to "Log in for Adulting assistance", "/auth/github" %></li>
-    <% else %>
-    <%= link_to "Logout", session_delete_path(session[:user_id]), method: :delete, data: {confirm: "End your session?"} %>
-  <% end %>
+    <% if session[:user_id] == nil %>
+      <%= link_to "Log in", "/auth/github" %></li>
+      <% else %>
+      <%= link_to "Logout", session_delete_path(session[:user_id]), method: :delete, data: {confirm: "End your session?"} %>
+    <% end %>
 
+  </div>
 </div>

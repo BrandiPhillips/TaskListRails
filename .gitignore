@@ -13,6 +13,8 @@
 
 # hide the .env - hide yo secrets!
 .env
+/*.env
+.DS_Store
 
 ## Specific to RubyMotion:
 .dat*

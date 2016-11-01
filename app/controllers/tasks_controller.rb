@@ -5,12 +5,13 @@ class TasksController < ApplicationController
   before_action :find_task, except: [:index, :create, :new]
 
   def index
-    @tasks = Task.all
+    @tasks = Task.where(user_id: session[:user_id].to_i)
   end
 
   def create
     @params = params
-    @mytask = Task.new
+    @mytask = Task.create
+    @mytask.user_id = session[:user_id].to_i
     @mytask.title = params["task"]["title"]
     @mytask.description = params["task"]["description"]
     @mytask.details = params["task"]["details"]
@@ -40,8 +41,8 @@ class TasksController < ApplicationController
   end
 
   def update
-    @params = params
-
+    # @params = params
+    @mytask.user_id = params["task"]["user_id"].to_i
     @mytask.title = params["task"]["title"]
     @mytask.description = params["task"]["description"]
     @mytask.details = params["task"]["details"]
