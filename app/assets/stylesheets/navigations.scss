@@ -3,5 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-image: url(https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiq2IOr64bQAhUphlQKHZW8BzgQjRwIBw&url=http%3A%2F%2Fwww.huffingtonpost.com%2Fthai-nguyen%2F10-effective-strategies-f_b_6083704.html&bvm=bv.137132246,d.cGw&psig=AFQjCNELrfajr5t7zSg5zeCUhsB582tfrg&ust=1478064992565805);
+  background-image: url("http://i.huffpost.com/gen/1890083/images/o-PRODUCTIVE-facebook.jpg");
+  background-size: 125%;
+  background-repeat: no-repeat;
+}
+
+header {
+  margin-top: 20%;
+  color: #FBF8F8;
+}
+
+.box {
+  border: solid 1px #FBF8F8;
+  width: 30%;
+
 }
