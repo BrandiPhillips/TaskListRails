@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :tasks
+
   validates :email, :uid, :provider, presence: true
   validates :email, :uid, :profile_name, uniqueness: true
 

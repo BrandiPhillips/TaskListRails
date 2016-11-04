@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Foundation Rails Gem
+gem 'foundation-rails'
+# Required due to an incompatibility between TurboLinks and Foundation.
+gem 'jquery-turbolinks'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7'
