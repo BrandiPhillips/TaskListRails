@@ -17595,3 +17595,570 @@ Completed 200 OK in 439ms (Views: 438.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/navigations.self-f5d6245ad275f88f4be1d5266332d18b126e911bc688dec4dfd8444cccf0b4e0.css?body=1" for ::1 at 2016-11-04 09:09:45 -0700
+
+
+Started GET "/auth/github" for ::1 at 2016-11-04 09:18:19 -0700
+
+
+Started GET "/auth/github" for ::1 at 2016-11-04 09:18:20 -0700
+
+
+Started GET "/auth/github/callback?code=1c59a61806ee001b00c5&state=8fc632743ff95069be9c908631c0ef90ac7cd949e6ab0a66" for ::1 at 2016-11-04 09:18:20 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"1c59a61806ee001b00c5", "state"=>"8fc632743ff95069be9c908631c0ef90ac7cd949e6ab0a66", "provider"=>"github"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", "17533030"], ["provider", "github"]]
+Redirected to http://localhost:3000/users/1/edit
+Completed 302 Found in 67ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-11-04 09:18:22 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 425ms (Views: 422.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/_settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-04 09:18:22 -0700
+
+
+Started GET "/assets/foundation_and_overrides.self-b8857805783c2044418bdc369597a77abf51832fc7b8e805727969f03487d245.css?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/navigations.self-f5d6245ad275f88f4be1d5266332d18b126e911bc688dec4dfd8444cccf0b4e0.css?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/application.self-129932ab10f1d1e5a4621657c626d393bb0718716393ddba5dc5b25d244bd3d9.css?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.core.self-5ed6ae130919ff28bddc99eeb4be8985572bbe9b5f0b1ba1bc6afc599780cebb.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.abide.self-433e642defac6b495106bcaa7f2a33c07efc1dad4c3970721631af8a2b52affc.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.accordion.self-74319d8fb502eb290aeb24e5faa73fcaaf37eae2d7900078f340f0b24935730a.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.dropdown.self-9c145c2f5fc3a177fc41227f741c20dbb83e12e6ab9b3dc4d43ca29e5405b701.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.accordionMenu.self-e689c1884b4ff0c1954861fd62d4731ee547815641354364558281ba1c1f6e60.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.dropdownMenu.self-ad8b1b4094eeef0662f6bc2626fce4dbdbcd378208a40d581a69173f69cf9416.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.equalizer.self-a50f50dcba868d8fa943fbff15ebbf4cc4379642743eb66e01700817f1d9a22d.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.interchange.self-07189eb841f19152efe7b88e50292d9c099a53a4915af9020cf5eea06a8016ec.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.drilldown.self-90f2ea486ef245e95194cd7b3aa3c03f646920688d3f3da4ac9307a1ba218fd6.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.magellan.self-7f76db4c0535c95ec2987c59e161dbb0d95797e6472be23b256ed839f9ffbb3e.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.offcanvas.self-cf7da0443dc19b13c7142a0dbe858c9345298ba3c74c18fd45c32b8e6a36891d.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.orbit.self-8b50fe52746c0bbfdfdd344a7dbd1a26aa712d39b0aa95725ef3f207f999115d.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.responsiveToggle.self-15d27e3276f2100adb158282147ff40f7fc86c37419100d6101c600d2e4df01d.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.responsiveMenu.self-04daa3af5d3c617fa7d588b45b56abd62539f5fde28756c7b4705de2aa10c4fd.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.reveal.self-249f251973a73a8fb50acefd10e382278024146355b39e47ce1934dd64df09d7.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.slider.self-e5558a2d21fad44bba147be2d729ed96f984229d05f6d5550eb1c0c20b974f90.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.sticky.self-0b1d0a23ec6c183dfc64272e91d5450ee95821d7573f1fe7397dc810f3cd6926.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.tabs.self-2e641c12d280fc8c560d070d5caf1e97560e035f955335b1244fa0ee0bb7291c.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.toggler.self-e503f9a635124ad4578a03dc24e47ac4cdb922a60bac8c9c99d024da00b0bd52.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.util.box.self-d575050eeb81d250e2a588d115b437fd2519a50712e1dce1766be2d87c5c7771.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.tooltip.self-8d4d19184b9c2c60eec1cb32096180b09fd0d1bae8bd5bf8674c34187914943d.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.util.keyboard.self-9ddfc95ccf73ddc51ead522151b53198b30c6a400e9f3f0be725d55c30f01912.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.util.mediaQuery.self-a84e048af5284ea81753b0d6b2d3bd8fb37c06084a37c7cb91bde285e3634c52.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.util.motion.self-13d4248460aba53c0fd52e1ec0d5cb41c317b1c4d974bc5d905c9976dc9ef218.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.util.nest.self-4135250cfc78d23e55f714f091d937a962ee8728df21e8c6c8f78fb1a4bae0b0.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.util.timerAndImageLoader.self-79e11d64a4f9336021e9ff10bdc178973516badb1d919695d1ed56595b69c072.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.util.touch.self-95e098450fe69653246bdfa7f1e7fe7dba15348524771d7b2c54c7c4298fccb5.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.util.triggers.self-d40e6f5817093dcf4732709f7dad2922cd74945c353c32a1e22f66da25d9d3f1.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/foundation.self-5ecf2f4d83e6260dabd6ec48e76d8ddebccf956563f34072221bf960d3b8c255.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/navigations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-04 09:18:23 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-04 09:18:24 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-04 09:18:24 -0700
+
+
+Started GET "/assets/application.self-a11f478daebeec5d29c3a1412323e28b3880b1c782a87821e2cc07f12ccdc9f9.js?body=1" for ::1 at 2016-11-04 09:18:24 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-04 09:18:24 -0700
+
+
+Started PATCH "/users/1/update" for ::1 at 2016-11-04 09:18:27 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LTdDNTiC9+4IJlxrm3V2BxOzv/hsJKcu3ltgOBVw+gDEcXz3mEc6d2VZMxjadsed6v/q7TKk6b7l4IZZ2gh/zQ==", "user"=>{"profile_name"=>"b.m.p", "email"=>"milligan.brandi@gmail.com", "name"=>"Brandi Milligan Phillips"}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'milligan.brandi@gmail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."uid" = '17533030' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."profile_name" = 'b.m.p' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/index
+Completed 302 Found in 27ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/index" for ::1 at 2016-11-04 09:18:27 -0700
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 344ms (Views: 332.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-10 15:23:09 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 1676ms (Views: 1652.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-10 15:23:12 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 153ms (Views: 152.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-10 15:23:12 -0800
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-10 15:23:12 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-10 15:23:12 -0800
+
+
+Started GET "/assets/application.self-38cf7d6923eaf57d1e60373935c95de287d6eea945d4696323854a5dc3237072.css?body=1" for ::1 at 2016-11-10 15:23:12 -0800
+
+
+Started GET "/assets/navigations.self-5e8431ed0ae41d6130505b5da0cd268dc016abf008d8754c7c94c6e4168f9382.css?body=1" for ::1 at 2016-11-10 15:23:12 -0800
+
+
+Started GET "/assets/navigations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-10 15:23:12 -0800
+
+
+Started GET "/assets/application.self-a11f478daebeec5d29c3a1412323e28b3880b1c782a87821e2cc07f12ccdc9f9.js?body=1" for ::1 at 2016-11-10 15:23:12 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-10 15:23:12 -0800
+
+
+Started GET "/" for ::1 at 2016-11-10 15:25:02 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 402ms (Views: 401.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navigations.self-eea42aed8251ef6b94acaf1aad3e915b753dbd7e716c8158cace039f90ae1a12.css?body=1" for ::1 at 2016-11-10 15:25:02 -0800
+
+
+Started GET "/" for ::1 at 2016-11-10 15:25:40 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 378ms (Views: 376.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-10 15:25:59 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 486ms (Views: 485.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navigations.self-3ebe516ee15458e30f30aa69cf93060d692ccd3ff2f6e2e53933f3e5ae123918.css?body=1" for ::1 at 2016-11-10 15:25:59 -0800
+
+
+Started GET "/" for ::1 at 2016-11-10 15:26:07 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 350ms (Views: 348.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navigations.self-e6a00bc734634df148e41bfc58036a1589e22dc54d930944cd2dde4873049356.css?body=1" for ::1 at 2016-11-10 15:26:08 -0800
+
+
+Started GET "/" for ::1 at 2016-11-10 15:27:16 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 312ms (Views: 311.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navigations.self-277a58cc89b199809e768a2c5135e639ba4d1f0d04f2cd6f27ddcd729d6f007f.css?body=1" for ::1 at 2016-11-10 15:27:16 -0800
+
+
+Started GET "/" for ::1 at 2016-11-10 15:27:38 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 306ms (Views: 305.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navigations.self-0ca87cdb38685f0a2bb437bbcfe04d608b7eeac5593bc1d77b6ae06f08c6005f.css?body=1" for ::1 at 2016-11-10 15:27:38 -0800
+
+
+Started GET "/" for ::1 at 2016-11-10 15:28:28 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 262ms (Views: 261.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-10 15:30:04 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 221ms (Views: 220.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-10 15:30:40 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 470ms (Views: 469.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navigations.self-3008b81c63a23248286df84722a849bfaad66060a44222e60dcf74212a4b2a16.css?body=1" for ::1 at 2016-11-10 15:30:40 -0800
+
+
+Started GET "/" for ::1 at 2016-11-10 15:31:01 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 526ms (Views: 525.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navigations.self-6b6bcef341e195cb865da728fcd8ecda4ee37f2e2a6ac44f51a5a0581f8d27de.css?body=1" for ::1 at 2016-11-10 15:31:02 -0800
+
+
+Started GET "/" for ::1 at 2016-11-10 15:31:25 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 422ms (Views: 421.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navigations.self-72851147234a71ccb8a53170d72cf148e40b70160cf846b01713fdc2a9c0b1be.css?body=1" for ::1 at 2016-11-10 15:31:25 -0800
+
+
+Started GET "/" for ::1 at 2016-11-10 15:31:37 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 274ms (Views: 273.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-10 15:31:51 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 468ms (Views: 465.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/navigations.self-e91693caab6a9039236e97929acac35fdc9e3020259450a1c83f5fac96d3dc4f.css?body=1" for ::1 at 2016-11-10 15:31:52 -0800
+
+
+Started DELETE "/sessions/1/destroy" for ::1 at 2016-11-10 15:31:57 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QkGmwGEi1muVkQjsDOYK5qajzRpHHxp2+kEtvNK9/b2rB5kCwecb8vjuZ59N5bt8X++YDxmfVObB+svdHcV4cA==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-10 15:31:57 -0800
+Processing by NavigationsController#index as HTML
+  Rendered navigations/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 297ms (Views: 295.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for ::1 at 2016-11-10 15:32:01 -0800
+
+
+Started GET "/auth/github" for ::1 at 2016-11-10 15:32:02 -0800
+
+
+Started GET "/auth/github/callback?code=b96838dc72926324586f&state=6e0061e926e0aac8af7c54c64f84ebc80e205eb5b02eb960" for ::1 at 2016-11-10 15:32:02 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"b96838dc72926324586f", "state"=>"6e0061e926e0aac8af7c54c64f84ebc80e205eb5b02eb960", "provider"=>"github"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", "17533030"], ["provider", "github"]]
+Redirected to http://localhost:3000/users/1/edit
+Completed 302 Found in 42ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-11-10 15:32:04 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 288ms (Views: 285.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/_settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation_and_overrides.self-b8857805783c2044418bdc369597a77abf51832fc7b8e805727969f03487d245.css?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/navigations.self-e91693caab6a9039236e97929acac35fdc9e3020259450a1c83f5fac96d3dc4f.css?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/application.self-38cf7d6923eaf57d1e60373935c95de287d6eea945d4696323854a5dc3237072.css?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.core.self-5ed6ae130919ff28bddc99eeb4be8985572bbe9b5f0b1ba1bc6afc599780cebb.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.abide.self-433e642defac6b495106bcaa7f2a33c07efc1dad4c3970721631af8a2b52affc.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.accordion.self-74319d8fb502eb290aeb24e5faa73fcaaf37eae2d7900078f340f0b24935730a.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.accordionMenu.self-e689c1884b4ff0c1954861fd62d4731ee547815641354364558281ba1c1f6e60.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.drilldown.self-90f2ea486ef245e95194cd7b3aa3c03f646920688d3f3da4ac9307a1ba218fd6.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.dropdown.self-9c145c2f5fc3a177fc41227f741c20dbb83e12e6ab9b3dc4d43ca29e5405b701.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.dropdownMenu.self-ad8b1b4094eeef0662f6bc2626fce4dbdbcd378208a40d581a69173f69cf9416.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.equalizer.self-a50f50dcba868d8fa943fbff15ebbf4cc4379642743eb66e01700817f1d9a22d.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.interchange.self-07189eb841f19152efe7b88e50292d9c099a53a4915af9020cf5eea06a8016ec.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.magellan.self-7f76db4c0535c95ec2987c59e161dbb0d95797e6472be23b256ed839f9ffbb3e.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.offcanvas.self-cf7da0443dc19b13c7142a0dbe858c9345298ba3c74c18fd45c32b8e6a36891d.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.orbit.self-8b50fe52746c0bbfdfdd344a7dbd1a26aa712d39b0aa95725ef3f207f999115d.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.responsiveMenu.self-04daa3af5d3c617fa7d588b45b56abd62539f5fde28756c7b4705de2aa10c4fd.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.responsiveToggle.self-15d27e3276f2100adb158282147ff40f7fc86c37419100d6101c600d2e4df01d.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.slider.self-e5558a2d21fad44bba147be2d729ed96f984229d05f6d5550eb1c0c20b974f90.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.reveal.self-249f251973a73a8fb50acefd10e382278024146355b39e47ce1934dd64df09d7.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.sticky.self-0b1d0a23ec6c183dfc64272e91d5450ee95821d7573f1fe7397dc810f3cd6926.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.tabs.self-2e641c12d280fc8c560d070d5caf1e97560e035f955335b1244fa0ee0bb7291c.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.toggler.self-e503f9a635124ad4578a03dc24e47ac4cdb922a60bac8c9c99d024da00b0bd52.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.tooltip.self-8d4d19184b9c2c60eec1cb32096180b09fd0d1bae8bd5bf8674c34187914943d.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.util.box.self-d575050eeb81d250e2a588d115b437fd2519a50712e1dce1766be2d87c5c7771.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.util.keyboard.self-9ddfc95ccf73ddc51ead522151b53198b30c6a400e9f3f0be725d55c30f01912.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.util.mediaQuery.self-a84e048af5284ea81753b0d6b2d3bd8fb37c06084a37c7cb91bde285e3634c52.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.util.motion.self-13d4248460aba53c0fd52e1ec0d5cb41c317b1c4d974bc5d905c9976dc9ef218.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.util.nest.self-4135250cfc78d23e55f714f091d937a962ee8728df21e8c6c8f78fb1a4bae0b0.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.util.timerAndImageLoader.self-79e11d64a4f9336021e9ff10bdc178973516badb1d919695d1ed56595b69c072.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.util.touch.self-95e098450fe69653246bdfa7f1e7fe7dba15348524771d7b2c54c7c4298fccb5.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.self-5ecf2f4d83e6260dabd6ec48e76d8ddebccf956563f34072221bf960d3b8c255.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/foundation.util.triggers.self-d40e6f5817093dcf4732709f7dad2922cd74945c353c32a1e22f66da25d9d3f1.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/navigations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-10 15:32:05 -0800
+
+
+Started GET "/assets/application.self-a11f478daebeec5d29c3a1412323e28b3880b1c782a87821e2cc07f12ccdc9f9.js?body=1" for ::1 at 2016-11-10 15:32:06 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-10 15:32:06 -0800
+
+
+Started PATCH "/users/1/update" for ::1 at 2016-11-10 15:32:09 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IX2WoknTypD/dINJ6gAM3gu6m/gLZC8x1QA5z8G3m3bIO6lg6RYHCZIL7DqrA71E8vbO7VXkYaHuu9+uDs8euw==", "user"=>{"profile_name"=>"b.m.p", "email"=>"milligan.brandi@gmail.com", "name"=>"Brandi Milligan Phillips"}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'milligan.brandi@gmail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."uid" = '17533030' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."profile_name" = 'b.m.p' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/index
+Completed 302 Found in 28ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/index" for ::1 at 2016-11-10 15:32:09 -0800
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.8ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 326ms (Views: 315.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks/index" for ::1 at 2016-11-10 15:40:19 -0800
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_header.erb (5.0ms)
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (83.5ms)
+Completed 200 OK in 791ms (Views: 765.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tasks/index" for ::1 at 2016-11-10 15:40:32 -0800
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_header.erb (0.7ms)
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 420ms (Views: 417.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/new" for ::1 at 2016-11-10 15:40:35 -0800
+Processing by TasksController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_header.erb (0.6ms)
+  Rendered shared/_form.html.erb (12.3ms)
+  Rendered shared/_footer.erb (1.0ms)
+  Rendered tasks/new.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 524ms (Views: 517.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/index" for ::1 at 2016-11-10 15:40:41 -0800
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_header.erb (0.6ms)
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 372ms (Views: 363.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/4/mark_complete" for ::1 at 2016-11-10 15:40:47 -0800
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"QaVxElPLZykpGM5ro7lQwrTKbZQeI8prvKqE7vLjx+uo407Q8w6qsERnoRjiuuFYTYY4gUCjhPuHEWKPPZtCJg==", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "tasks" SET "completion_status" = ?, "completion_date" = ?, "updated_at" = ? WHERE "tasks"."id" = ?  [["completion_status", "t"], ["completion_date", "2016-11-10 23:40:47.121642"], ["updated_at", "2016-11-10 23:40:47.123153"], ["id", 4]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/index
+Completed 302 Found in 22ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/tasks/index" for ::1 at 2016-11-10 15:40:47 -0800
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_header.erb (0.7ms)
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 444ms (Views: 440.4ms | ActiveRecord: 0.6ms)
